@@ -1,0 +1,554 @@
+body {
+  background-color: rgb(20, 20, 20);
+  font-family: 'SF Pro Text',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  margin: 0;
+  padding: 0;
+}
+
+#my-model {
+  transition: opacity 1s ease-in; 
+}
+
+#loading-screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  animation: fadeOut 3s ease-out forwards;
+  display: block;
+}
+
+@keyframes fadeOut {
+  0%, 20% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+    display: none;
+}
+}
+
+.loadingScreenText {
+  font-size: 60px;
+  color: rgb(225, 225, 225);
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: 200;
+}
+
+.navigation-div {
+  height: 100%;
+  width: 25px;
+  left: 65px;
+  background-color: rgb(90, 171, 90);
+  position: absolute;
+  z-index: 5;
+  overflow: visible;
+}
+
+.about-me-nav {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgb(90, 171, 90);
+  border: 0px;
+  transform: translateX(-39%);
+  position: absolute;
+  z-index: 5;
+  top: 5%;
+}
+
+.projects-nav {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgb(90, 171, 90);
+  border: 0px;
+  top: 100px;
+  transform: translateX(-39%);
+  position: absolute;
+  z-index: 5;
+  top: 40%;
+}
+
+.contact-nav {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgb(90, 171, 90);
+  border: 0px;
+  top: 100px;
+  transform: translateX(-39%);
+  position: absolute;
+  z-index: 5;
+  top: 75%;
+}
+
+.nav-button {
+  color:  rgb(10, 10, 10);
+  font-size: 20px;
+}
+
+.aboutme-hover-div {
+  background-color: rgba(150, 203, 150, 0.500);
+  display: none;
+  position: absolute;
+  top: 5%;
+  width: 240px;
+  height: 120px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  z-index: 3;
+  padding-left: 60px;
+  padding-right: 25px;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.projects-hover-div {
+  background-color: rgba(150, 203, 150, 0.500);
+  display: none;
+  position: absolute;
+  top: 40%;
+  width: 240px;
+  height: 120px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  z-index: 3;
+  padding-left: 60px;
+  padding-right: 25px;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-hover-div {
+  background-color: rgba(150, 203, 150, 0.500);
+  display: none;
+  position: absolute;
+  top: 75%;
+  width: 240px;
+  height: 120px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  z-index: 3;
+  padding-left: 60px;
+  padding-right: 25px;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.description-text {
+  color:  rgb(10, 10, 10);
+  font-size: 16px;
+}
+
+.projectsOnPC {
+  position: absolute;
+  z-index: 10;
+  width: 710px;
+  height: 415px;
+  border: 0px solid transparent;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20.5%;
+}
+
+.aboutMeMusic {
+  position: absolute;
+  z-index: 10;
+  width: 276px;
+  height: 360px;
+  border: 0px solid transparent;
+  margin-left: auto;
+  margin-right: auto;
+  left: 52.7%;
+  transform: translateX(-50%);
+  top: 14.43%;
+}
+
+.aboutMeGames {
+  position: absolute;
+  z-index: 10;
+  width: 276px;
+  height: 360px;
+  border: 0px solid transparent;
+  margin-left: auto;
+  margin-right: auto;
+  left: 26.9%;
+  transform: translateX(-50%);
+  top: 14.43%;
+}
+
+.aboutMeSwim {
+  position: absolute;
+  z-index: 10;
+  width: 276px;
+  height: 360px;
+  border: 1px solid red;
+  margin-left: auto;
+  margin-right: auto;
+  left: 78.5%;
+  transform: translateX(-50%);
+  top: 14.43%;
+}
+
+.socials {
+  position: fixed;
+  background-color: transparent;
+  background-image: url('assets/navigation/socials.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 20px;
+  right: 20px; 
+  border: 0px solid transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  z-index: 5;
+}
+
+.socials:hover {
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.5);
+  scale: 1.2;
+}
+
+.instagram {
+  position: fixed;
+  background-image: url('assets/socials/instagram.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 20px;
+  right: 130px; 
+  border: 0px solid transparent;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+  border-radius: 100%;
+  display: none;
+  z-index: 5;
+  transition: box-shadow 0.3s;
+}
+
+.instagram:hover {
+  box-shadow: 0 0 15px 2px rgb(209, 27, 185);
+  scale: 1.2;
+}
+
+.githubHS {
+  position: fixed;
+  background-image: url('assets/socials/github.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 75px;
+  right: 116px; 
+  border: 0px solid transparent;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+  border-radius: 100%;
+  display: none;
+  z-index: 5;
+  transition: box-shadow 0.3s;
+}
+
+.githubHS:hover {
+  box-shadow: 0 0 15px 2px rgb(89, 0, 128);
+  scale: 1.2;
+}
+
+.linkedin {
+  position: fixed;
+  background-image: url('assets/socials/linkedin.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 116px;
+  right: 75px; 
+  border: 0px solid transparent;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+  border-radius: 100%;
+  display: none;
+  z-index: 5;
+  transition: box-shadow 0.3s;
+}
+
+.linkedin:hover {
+  box-shadow: 0 0 15px 2px rgb(0, 114, 177);
+  scale: 1.2;
+}
+
+.resume {
+  position: fixed;
+  background-image: url('assets/socials/resume.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 130px;
+  right: 20px; 
+  border: 0px solid transparent;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+  border-radius: 100%;
+  display: none;
+  z-index: 5;
+  transition: box-shadow 0.3s;
+}
+
+.resume:hover {
+  box-shadow: 0 0 15px 2px rgb(255, 255, 255);
+  scale: 1.2;
+} 
+
+.exitButton {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  position: fixed;
+  background-color: transparent;
+  background-image: url('assets/navigation/X.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 20px;
+  right: 20px; 
+  border: 0px solid transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  z-index: 5;
+  cursor: pointer;
+  display: none;
+}
+
+.exitButton:hover {
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5);
+  scale: 1.2;
+}
+
+.gamesButton {
+  position: fixed;
+  top: 44.5%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 21vw;
+  height: 48.5vh;
+  border: 0px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s;
+}
+
+.spotifyButton {
+  position: fixed;
+  top: 44.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 21vw;
+  height: 48.5vh;
+  border: 0px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s;
+}
+
+.swimButton {
+  position: fixed;
+  top: 44.5%;
+  left: 78.3%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 21vw;
+  height: 48.5vh;
+  border: 0px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s;
+}
+
+.spotifyButton:hover,
+.gamesButton:hover,
+.swimButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navigation {
+  position: fixed;
+  background-color: transparent;
+  background-image: url('assets/navigation/menu.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 20px;
+  left: 20px; 
+  border: 0px solid transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  z-index: 5;
+}
+
+.navigation:hover {
+  scale: 1.2;
+}
+
+.aboutMe {
+  position: fixed;
+  background-image: url('assets/navigation/aboutme.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 160px;
+  left: 20px; 
+  border: 0px solid transparent;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+  border-radius: 100%;
+  display: none;
+  z-index: 5;
+  transition: box-shadow 0.3s;
+}
+
+.aboutMe:hover {
+  box-shadow: 0 0 15px 2px rgb(255, 255, 255);
+  scale: 1.2;
+}
+
+.projects {
+  position: fixed;
+  background-image: url('assets/navigation/projects.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 90px;
+  left: 20px; 
+  border: 0px solid transparent;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+  border-radius: 100%;
+  display: none;
+  z-index: 5;
+  transition: box-shadow 0.3s;
+}
+
+.projects:hover {
+  box-shadow: 0 0 15px 2px rgb(255, 255, 255);
+  scale: 1.2;
+}
+
+.PCHS {
+  position: fixed;
+  left: 49.95%;
+  top: 49.1%;
+  transform: translate(-50%, -50%);
+  width: 54.2%;
+  height: 55.9%;
+  z-index: 10;
+  display: none;
+}
+
+.login {
+  font-size: 60px;
+  color: darkgreen;
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: 200;
+}
+
+.PC {
+  position: fixed;
+  left: 49.95%;
+  top: 49.1%;
+  transform: translate(-50%, -50%);
+  width: 54.2%;
+  height: 55.9%;
+  z-index: 10;
+  display: none;
+}
+
+.wordle {
+  background-image: url('assets/projects/wordle');
+  background-color: transparent;
+  background-size: cover; 
+  width: 80px; 
+  height: 80px; 
+  font-size: 16px;
+  border: none; 
+  cursor: pointer; 
+  position: absolute; 
+  top: 20px; 
+  right: 20px;
+}
+
+.wordle:hover {
+  transform: translateY(3px);
+}
+
+.classRate {
+  background-image: url('assets/projects/classRate.png');
+  background-color: transparent;
+  background-size: cover; 
+  width: 80px; 
+  height: 80px; 
+  font-size: 16px;
+  border: none; 
+  cursor: pointer; 
+  position: absolute; 
+  top: 120px; 
+  right: 20px;
+}
+
+.classRate:hover {
+  transform: translateY(3px);
+}
+
+.stocks {
+  background-image: url('assets/projects/stocks.png');
+  background-color: transparent;
+  background-size: cover; 
+  width: 80px; 
+  height: 80px; 
+  font-size: 16px;
+  border: none; 
+  cursor: pointer; 
+  position: absolute; 
+  top: 220px; 
+  right: 20px;
+}
+
+.stocks:hover {
+  transform: translateY(3px);
+}
+
+.digits {
+  background-image: url('assets/projects/digits.png');
+  background-color: transparent;
+  background-size: cover; 
+  width: 80px; 
+  height: 80px; 
+  font-size: 16px;
+  border: none; 
+  cursor: pointer; 
+  position: absolute; 
+  top: 320px; 
+  right: 15px;
+}
+
+.digits:hover {
+  transform: translateY(3px);
+}
